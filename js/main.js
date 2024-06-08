@@ -63,4 +63,5 @@ openMobMenu.addEventListener('click', () => {
 
 closeMobMenu.addEventListener('click', () => {
   navMob.classList.remove('open');
+  body.classList.remove('no-scroll');
 });
