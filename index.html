@@ -5,10 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Burger</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
   </head>
 
-  <body>
-    <h1>Make Your Burger</h1>
+  <body class="body">
+    <header class="header">
+      <!-- NAV -->
+      <nav class="nav">
+        <div class="nav-left">
+          <a class="logo" href="./index.html"
+            ><img src="./img/logo.svg" alt="logo"
+          /></a>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a
+                class="nav-list__link nav-list__link--active"
+                href="./index.html"
+                >discover</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="./make-burger.html"
+                >make your burger</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <button class="btn-call-back">Call Me back</button>
+          <a class="number" href="tel:+88004378722">8 800 437-87-22</a>
+        </div>
+
+        <button class="open-mobile-menu">
+          <img src="./img/icon/menu_open.svg" alt="" />
+        </button>
+      </nav>
+
+      <!-- BURGER-->
+      <div class="container">
+        <div class="main">
+          <div class="main-title">
+            <h1 class="main-title__text">Make Your Burger</h1>
+            <p class="main-title__paragraph">
+              Parallax screen. Burger ingredients and emojis moving depending on
+              the position of the mouse pointer.
+            </p>
+          </div>
+          <div class="main-burger">
+            <img
+              class="main-burger--mob"
+              src="./img/burger/burger-mobile.svg"
+              alt="mobile-burger"
+            />
+            <img class="main-burger--bg" src="./img/bg/bg_main.svg" alt="bg" />
+
+            <img
+              class="burger burger--footer-bun"
+              src="./img/burger/footer_bun.svg"
+              alt=""
+            />
+            <img
+              class="burger burger--mayo"
+              src="./img/burger/mayo.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--salad"
+              src="./img/burger/salad.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--cheese"
+              src="./img/burger/cheese.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--onion"
+              src="./img/burger/onion.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--cutlet"
+              src="./img/burger/cutlet.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--chicken_cutlet"
+              src="./img/burger/chicken_cutlet.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--tomato"
+              src="./img/burger/tomato.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--cutlet-2"
+              src="./img/burger/cutlet.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--cheese-2"
+              src="./img/burger/cheese.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--cucumbers"
+              src="./img/burger/cucumbers.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--onion-2"
+              src="./img/burger/onion.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--salad-2"
+              src="./img/burger/salad.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--mayo-2"
+              src="./img/burger/mayo.svg"
+              alt=""
+            />
+
+            <img
+              class="burger burger--top-bun"
+              src="./img/burger/top_bun.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAV-MOBILE-->
+    <nav class="nav-mobile hidden">
+      <div class="nav-mobile__top">
+        <ul class="nav-mobile--list">
+          <li class="nav-mobile--item">
+            <a href="./index.html">Discover</a>
+          </li>
+          <li class="nav-mobile--item">
+            <a href="./make-burger.html">Make Your Burger</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-mobile__bot">
+        <button class="btn-call-back">Call Me back</button>
+        <a class="number" href="tel:+88004378722">8 800 437-87-22</a>
+      </div>
+      <button class="close-mobile-menu">
+        <img src="./img/icon/menu_close.svg" alt="close menu" />
+      </button>
+    </nav>
 
     <script src="./js/main.js"></script>
   </body>

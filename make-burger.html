@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <!-- NAV -->
+      <nav class="nav">
+        <div class="nav-left">
+          <a class="logo" href="./index.html"
+            ><img src="./img/logo.svg" alt="logo"
+          /></a>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="./index.html">discover</a>
+            </li>
+            <li class="nav-list__item">
+              <a
+                class="nav-list__link nav-list__link--active"
+                href="./make-burger.html"
+                >make your burger</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <button class="btn-call-back">Call Me back</button>
+          <a class="number" href="tel:+88004378722">8 800 437-87-22</a>
+        </div>
+
+        <button class="open-mobile-menu">
+          <img src="./img/icon/menu_open.svg" alt="" />
+        </button>
+      </nav>
+    </header>
+
+    <!-- NAV-MOBILE-->
+    <nav class="nav-mobile hidden">
+      <div class="nav-mobile__top">
+        <ul class="nav-mobile--list">
+          <li class="nav-mobile--item">
+            <a href="./index.html">Discover</a>
+          </li>
+          <li class="nav-mobile--item">
+            <a href="./make-burger.html">Make Your Burger</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-mobile__bot">
+        <button class="btn-call-back">Call Me back</button>
+        <a class="number" href="tel:+88004378722">8 800 437-87-22</a>
+      </div>
+      <button class="close-mobile-menu">
+        <img src="./img/icon/menu_close.svg" alt="close menu" />
+      </button>
+    </nav>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

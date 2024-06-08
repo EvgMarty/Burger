@@ -1,0 +1,146 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 272px;
+  margin-top: 50px;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    gap: clamp(0.313rem, -0.875rem + 5.94vw, 6.25rem);
+  }
+}
+.main-title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 482px;
+}
+
+.main-title__text {
+  font-size: clamp(1.625rem, 1.05rem + 2.88vw, 4.5rem);
+  font-weight: 500;
+  line-height: 80.5px;
+  text-align: left;
+
+  @media (max-width: 1200px) {
+    text-align: center;
+  }
+}
+.main-title__paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: var(--text-paragraph);
+
+  @media (max-width: 1200px) {
+    text-align: center;
+  }
+}
+.main-burger {
+  position: relative;
+  height: clamp(9.25rem, 1.1rem + 40.75vw, 50rem);
+  max-width: 638px;
+  width: 100%;
+}
+
+.main-burger--mob {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 1;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.main-burger--bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: -1;
+}
+
+.burger {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
+  &--footer-bun {
+    bottom: 1%;
+  }
+
+  &--mayo {
+    bottom: 5%;
+  }
+
+  &--salad {
+    bottom: 8%;
+  }
+
+  &--cheese {
+    bottom: 10%;
+  }
+
+  &--onion {
+    bottom: 7%;
+  }
+
+  &--cutlet {
+    bottom: 20%;
+  }
+
+  &--chicken_cutlet {
+    bottom: 23%;
+  }
+
+  &--tomato {
+    bottom: 29%;
+  }
+
+  &--cutlet-2 {
+    bottom: 36%;
+  }
+
+  &--cheese-2 {
+    bottom: 38%;
+  }
+
+  &--cucumbers {
+    bottom: 38%;
+  }
+
+  &--onion-2 {
+    bottom: 39%;
+  }
+
+  &--salad-2 {
+    bottom: 50%;
+  }
+
+  &--mayo-2 {
+    bottom: 54%;
+  }
+
+  &--top-bun {
+    bottom: 57%;
+  }
+}

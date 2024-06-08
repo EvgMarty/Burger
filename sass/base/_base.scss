@@ -1,7 +1,19 @@
 @import url(../fonts/TTNormsPro/stylesheet.css);
 
 body {
-  font-family: 'TT Norms Pro', sans-serif;
-  font-size: 72px;
-  font-weight: 500;
+  font-family: var(--font-TT_Norms_Pro);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.no-scroll {
+  overflow: hidden; 
+}
+
+.hidden {
+  display: none;
 }

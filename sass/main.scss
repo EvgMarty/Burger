@@ -1,7 +1,9 @@
 //Base
-@import "./base/base";
-@import "./base/reset";
-@import "./base/vars";
+@import './base/base';
+@import './base/reset';
+@import './base/vars';
 
 //Blocks
-@import "./blocks/titles";
+@import './blocks/header';
+@import './blocks/nav';
+@import './blocks/nav_mobile';
