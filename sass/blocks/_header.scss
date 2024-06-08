@@ -64,10 +64,45 @@
   }
 }
 
+.btn-make-burger {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: clamp(3.75rem, 3.375rem + 1.88vw, 5.625rem);
+  width: clamp(3.75rem, 3.375rem + 1.88vw, 5.625rem);
+  background: var(--accent);
+
+  left: -90px;
+  bottom: 20%;
+
+  padding: 10px;
+
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 18px;
+  text-align: center;
+
+  border-radius: 50%;
+  transition: all 0.1s ease-in;
+
+  @media (max-width: 900px) {
+    left: 0px;
+  }
+
+  &:hover {
+    filter: saturate(150%);
+  }
+
+  z-index: 3;
+}
+
 .main-burger--bg {
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 120%;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);

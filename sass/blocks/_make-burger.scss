@@ -1,0 +1,51 @@
+.make-burger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 140px;
+  height: 619px;
+  padding: 0 50px;
+}
+
+.make-burger__sum {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.make-burger__summary {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.13px;
+  text-align: left;
+}
+
+.make-burger__summary-list {
+  display: flex;
+  gap: 12px;
+}
+.make-burger__summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5px;
+  width: 126px;
+  height: 56px;
+  border-radius: 50px;
+  background: var(--card-btn-color);
+}
+
+.make-burger__typography {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.75px;
+  text-align: left;
+
+  span {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.75px;
+    text-align: left;
+    color: #ff4d4f;
+  }
+}

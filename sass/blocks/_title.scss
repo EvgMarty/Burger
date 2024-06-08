@@ -1,0 +1,13 @@
+.make-burger_title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: clamp(12.5rem, 8.975rem + 17.63vw, 30.125rem);
+}
+
+.title {
+  font-size: clamp(1.625rem, 1.05rem + 2.88vw, 4.5rem);
+  font-weight: 500;
+  line-height: clamp(1.563rem, 0.869rem + 3.47vw, 5.031rem);
+  text-align: left;
+}

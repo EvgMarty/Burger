@@ -191,10 +191,40 @@ legend {
   }
 }
 
+.btn-make-burger {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: clamp(3.75rem, 3.375rem + 1.88vw, 5.625rem);
+  width: clamp(3.75rem, 3.375rem + 1.88vw, 5.625rem);
+  background: var(--accent);
+  left: -90px;
+  bottom: 20%;
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.1s ease-in;
+  z-index: 3;
+}
+@media (max-width: 900px) {
+  .btn-make-burger {
+    left: 0px;
+  }
+}
+.btn-make-burger:hover {
+  filter: saturate(150%);
+}
+
 .main-burger--bg {
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 120%;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -255,6 +285,20 @@ legend {
 }
 .burger--top-bun {
   bottom: 57%;
+}
+
+.make-burger_title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: clamp(12.5rem, 8.975rem + 17.63vw, 30.125rem);
+}
+
+.title {
+  font-size: clamp(1.625rem, 1.05rem + 2.88vw, 4.5rem);
+  font-weight: 500;
+  line-height: clamp(1.563rem, 0.869rem + 3.47vw, 5.031rem);
+  text-align: left;
 }
 
 .nav {
@@ -426,4 +470,56 @@ legend {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.make-burger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 140px;
+  height: 619px;
+  padding: 0 50px;
+}
+
+.make-burger__sum {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.make-burger__summary {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.13px;
+  text-align: left;
+}
+
+.make-burger__summary-list {
+  display: flex;
+  gap: 12px;
+}
+
+.make-burger__summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5px;
+  width: 126px;
+  height: 56px;
+  border-radius: 50px;
+  background: var(--card-btn-color);
+}
+
+.make-burger__typography {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.75px;
+  text-align: left;
+}
+.make-burger__typography span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.75px;
+  text-align: left;
+  color: #ff4d4f;
 }/*# sourceMappingURL=main.css.map */
