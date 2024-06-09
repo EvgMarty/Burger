@@ -1,6 +1,7 @@
 .make-burger_title {
   display: flex;
   flex-direction: column;
+  flex: 0 1 auto;
   gap: 16px;
   max-width: clamp(12.5rem, 8.975rem + 17.63vw, 30.125rem);
 }

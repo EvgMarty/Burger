@@ -1,5 +1,7 @@
 .make-burger {
+  position: relative;
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   margin-top: 140px;
@@ -10,6 +12,10 @@
 .make-burger__sum {
   display: flex;
   flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  padding-bottom: 50px;
+  flex: 0 1 auto;
   gap: 24px;
 }
 
@@ -35,6 +41,11 @@
   background: var(--card-btn-color);
 }
 
+.change-wrapper {
+  height: 200px;
+
+  margin-top: 55px;
+}
 .make-burger__typography {
   font-size: 24px;
   font-weight: 400;
@@ -48,4 +59,39 @@
     text-align: left;
     color: #ff4d4f;
   }
+  &.hidden {
+    display: none;
+  }
+}
+
+//free souce
+.free-wrapper {
+  padding: 0 0 0 20px;
+
+  &.hidden {
+    display: none;
+  }
+}
+.free__plus {
+  color: #ff4d4f;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43.13px;
+  text-align: left;
+}
+.free__description {
+  font-family: TT Norms Pro;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.75px;
+  text-align: left;
+  margin-top: 8px;
+
+  span {
+    color: #c2c7cd;
+  }
+}
+.free__souce {
+  margin-left: 150px;
+  margin-top: 28px;
 }

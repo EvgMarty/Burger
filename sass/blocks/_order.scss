@@ -1,0 +1,31 @@
+.order-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px;
+}
+.btn-order {
+  cursor: default;
+  width: 152px;
+  height: 67px;
+  color: white;
+  background: var(--card-btn-color);
+  padding: 24px, 12px, 24px;
+  border-radius: 99px;
+
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 43.13px;
+
+  transition: all 0.1a ease-in;
+
+  &--active {
+    cursor: pointer;
+    background: var(--btn-bg-color);
+    &:hover {
+      opacity: 80%;
+    }
+  }
+}

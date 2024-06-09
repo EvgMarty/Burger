@@ -45,25 +45,207 @@
           <div class="make-burger_title">
             <h1 class="title">Make Your Burger</h1>
           </div>
+
+          <!-- CREATE BURGER -->
+          <div class="burger-create">
+            <div class="warning">
+              <img src="./img/emojo/explosion.svg" alt="warning" />
+              Are You Sure
+            </div>
+            <div class="price">$ <span data-sum-price>0.00</span></div>
+            <img
+              class="burger-img"
+              src="./img/bg/bg_burger.svg"
+              alt="bg-burger"
+            />
+            <div class="burger-create__wrapper"></div>
+          </div>
+
           <div class="make-burger__sum">
             <p class="make-burger__summary">Summary</p>
             <ul class="make-burger__summary-list">
               <li class="make-burger__summary-item">
                 <img src="./img/icon/kcal.svg" alt="" />
-                50 ckal
+                <span data-sum-kcal>0 </span>ckal
               </li>
               <li class="make-burger__summary-item">
                 <img src="./img/icon/time.svg" alt="" />
-                0 min
+                <span data-sum-time>0 </span> min
               </li>
               <li class="make-burger__summary-item">
                 <img src="./img/icon/weight.svg" alt="" />
-                20 g
+                <span data-sum-gram>0 </span> g
               </li>
             </ul>
-            <p class="make-burger__typography">
-              Build a <span class="accent">$5</span> Burger and Get a Gift
-            </p>
+
+            <div class="change-wrapper">
+              <p class="make-burger__typography appeal ">
+                Build a <span class="accent">$5</span> Burger and Get a Gift
+              </p>
+
+              <div class="free-wrapper hidden">
+                <p class="free__plus">+ Gift</p>
+                <p class="free__description">
+                  Tomato Ketchup <span>0.2 oz</span>
+                </p>
+                <img
+                  class="free__souce"
+                  src="./img/burger/sauce.svg"
+                  alt="souce"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ORDER btn -->
+        <div class="order-wrapper">
+          <button class="btn-order ">Order</button>
+        </div>
+
+        <!-- PRODUCT -->
+        <div class="proвuct-wrapper">
+          <div class="product__card" data-name="cutlet" data-id="01">
+            <div
+              class="info"
+              data-kcal="12"
+              data-time="6"
+              data-gram="7"
+              data-price="2"
+            ></div>
+            <img src="./img/cards/cutlet.svg" alt="cutlet" />
+            <p class="product__name">Coutlet</p>
+            <!-- counter -->
+            <div class="product__counter-wrapper">
+              <div class="product__control" data-action="minus">-</div>
+              <div class="product__current" data-counter>0</div>
+              <div class="product__control" data-action="plus">+</div>
+            </div>
+          </div>
+
+          <div class="product__card" data-name="mayo" data-id="02">
+            <div
+              class="info"
+              data-kcal="12"
+              data-time="6"
+              data-gram="7"
+              data-price="0.2"
+            ></div>
+            <img src="./img/cards/mayo.svg" alt="mayo" />
+            <p class="product__name">Mayo</p>
+            <!-- counter -->
+            <div class="product__counter-wrapper">
+              <div class="product__control" data-action="minus">-</div>
+              <div class="product__current" data-counter>0</div>
+              <div class="product__control" data-action="plus">+</div>
+            </div>
+          </div>
+
+          <div class="product__card" data-name="onion" data-id="03">
+            <div
+              class="info"
+              data-kcal="12"
+              data-time="6"
+              data-gram="7"
+              data-price="0.2"
+            ></div>
+            <img src="./img/cards/onion.svg" alt="onion" />
+            <p class="product__name">Onion</p>
+            <!-- counter -->
+            <div class="product__counter-wrapper">
+              <div class="product__control" data-action="minus">-</div>
+              <div class="product__current" data-counter>0</div>
+              <div class="product__control" data-action="plus">+</div>
+            </div>
+          </div>
+
+          <div class="product__card" data-name="tomato" data-id="04">
+            <div
+              class="info"
+              data-kcal="12"
+              data-time="6"
+              data-gram="7"
+              data-price="0.2"
+            ></div>
+            <img src="./img/cards/tomato.svg" alt="tomato" />
+            <p class="product__name">Tomato</p>
+            <!-- counter -->
+            <div class="product__counter-wrapper">
+              <div class="product__control" data-action="minus">-</div>
+              <div class="product__current" data-counter>0</div>
+              <div class="product__control" data-action="plus">+</div>
+            </div>
+          </div>
+
+          <div class="product__card" data-name="cucumbers" data-id="05">
+            <div
+              class="info"
+              data-kcal="8"
+              data-time="5"
+              data-gram="4"
+              data-price="0.2"
+            ></div>
+            <img src="./img/cards/cucumber.svg" alt="cucumbers" />
+            <p class="product__name">Cucumber</p>
+            <!-- counter -->
+            <div class="product__counter-wrapper">
+              <div class="product__control" data-action="minus">-</div>
+              <div class="product__current" data-counter>0</div>
+              <div class="product__control" data-action="plus">+</div>
+            </div>
+          </div>
+
+          <div class="product__card" data-name="cheese" data-id="06">
+            <div
+              class="info"
+              data-kcal="8"
+              data-time="5"
+              data-gram="4"
+              data-price="1"
+            ></div>
+            <img src="./img/cards/cheese.svg" alt="cheese" />
+            <p class="product__name">Cheese</p>
+            <!-- counter -->
+            <div class="product__counter-wrapper">
+              <div class="product__control" data-action="minus">-</div>
+              <div class="product__current" data-counter>0</div>
+              <div class="product__control" data-action="plus">+</div>
+            </div>
+          </div>
+
+          <div class="product__card" data-name="salad" data-id="07">
+            <div
+              class="info"
+              data-kcal="8"
+              data-time="5"
+              data-gram="4"
+              data-price="1"
+            ></div>
+            <img src="./img/cards/salad.svg" alt="salad" />
+            <p class="product__name">Salad</p>
+            <!-- counter -->
+            <div class="product__counter-wrapper">
+              <div class="product__control" data-action="minus">-</div>
+              <div class="product__current" data-counter>0</div>
+              <div class="product__control" data-action="plus">+</div>
+            </div>
+          </div>
+
+          <div class="product__card" data-name="top_bun" data-id="08">
+            <div
+              class="info"
+              data-kcal="8"
+              data-time="5"
+              data-gram="4"
+              data-price="1"
+            ></div>
+            <img src="./img/cards/bun.svg" alt="bun" />
+            <p class="product__name">Bun</p>
+            <!-- counter -->
+            <div class="product__counter-wrapper">
+              <div class="product__control" data-action="minus">-</div>
+              <div class="product__current" data-counter>0</div>
+              <div class="product__control" data-action="plus">+</div>
+            </div>
           </div>
         </div>
       </div>
@@ -90,6 +272,7 @@
       </button>
     </nav>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/burger.js"></script>
+    <script src="./js/nav-mobile.js"></script>
   </body>
 </html>

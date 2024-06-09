@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../fonts/TTNormsPro/stylesheet.css);
 body {
   font-family: var(--font-TT_Norms_Pro);
@@ -290,6 +291,7 @@ legend {
 .make-burger_title {
   display: flex;
   flex-direction: column;
+  flex: 0 1 auto;
   gap: 16px;
   max-width: clamp(12.5rem, 8.975rem + 17.63vw, 30.125rem);
 }
@@ -473,6 +475,7 @@ legend {
 }
 
 .make-burger {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -484,6 +487,10 @@ legend {
 .make-burger__sum {
   display: flex;
   flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  padding-bottom: 50px;
+  flex: 0 1 auto;
   gap: 24px;
 }
 
@@ -510,6 +517,11 @@ legend {
   background: var(--card-btn-color);
 }
 
+.change-wrapper {
+  height: 200px;
+  margin-top: 55px;
+}
+
 .make-burger__typography {
   font-size: 24px;
   font-weight: 400;
@@ -522,4 +534,218 @@ legend {
   line-height: 28.75px;
   text-align: left;
   color: #ff4d4f;
+}
+.make-burger__typography.hidden {
+  display: none;
+}
+
+.free-wrapper {
+  padding: 0 0 0 20px;
+}
+.free-wrapper.hidden {
+  display: none;
+}
+
+.free__plus {
+  color: #ff4d4f;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43.13px;
+  text-align: left;
+}
+
+.free__description {
+  font-family: TT Norms Pro;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.75px;
+  text-align: left;
+  margin-top: 8px;
+}
+.free__description span {
+  color: #c2c7cd;
+}
+
+.free__souce {
+  margin-left: 150px;
+  margin-top: 28px;
+}
+
+.burger-create {
+  flex: 1;
+  min-width: 500px;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.burger-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  overflow-y: visible;
+}
+
+.burger-create__wrapper {
+  min-width: 500px;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.proвuct-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 25px;
+  margin-bottom: 92px;
+}
+
+.product__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 140px;
+  height: 180px;
+  border: 1px solid var(--bg-accent);
+  padding: 18px 24px;
+  border-radius: 20px;
+}
+
+.product__name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.77px;
+  text-align: center;
+}
+
+.product__counter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.product__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--card-text-color);
+  background: var(--card-btn-color);
+  transition: all 0.1s ease-in;
+  font-size: 25px;
+  cursor: pointer;
+}
+.product__control:hover {
+  background: #eaeaff;
+}
+
+.product__current {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.17px;
+  text-align: center;
+}
+
+.warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.1s ease-in;
+  opacity: 0;
+  position: absolute;
+  right: 10%;
+  top: -10%;
+  gap: 8px;
+  width: 216px;
+  height: 53px;
+  border-radius: 99px;
+  background: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.56px;
+  text-align: left;
+  z-index: 2;
+  box-shadow: 17px 14px 45px -16px rgba(0, 0, 0, 0.75);
+}
+.warning::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 27px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  transform: rotate(225deg);
+}
+.warning--open {
+  opacity: 1;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 5px;
+  bottom: 205px;
+  min-width: 116px;
+  padding: 0 20px;
+  height: 67px;
+  border-radius: 99px;
+  background: var(--accent);
+  color: white;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 43.13px;
+  text-align: right;
+  z-index: 3;
+}
+
+.order-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px;
+}
+
+.btn-order {
+  cursor: default;
+  width: 152px;
+  height: 67px;
+  color: white;
+  background: var(--card-btn-color);
+  padding: 24px, 12px, 24px;
+  border-radius: 99px;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 43.13px;
+  transition: all 0.1a ease-in;
+}
+.btn-order--active {
+  cursor: pointer;
+  background: var(--btn-bg-color);
+}
+.btn-order--active:hover {
+  opacity: 80%;
 }/*# sourceMappingURL=main.css.map */
