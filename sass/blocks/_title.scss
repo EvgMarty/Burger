@@ -4,6 +4,10 @@
   flex: 0 1 auto;
   gap: 16px;
   max-width: clamp(12.5rem, 8.975rem + 17.63vw, 30.125rem);
+
+  @media (max-width: 1250px) {
+    display: none;
+  }
 }
 
 .title {

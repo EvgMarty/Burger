@@ -1,6 +1,6 @@
 .burger-create {
   flex: 1;
-  min-width: 500px;
+
   position: relative;
   display: flex;
   justify-content: start;
@@ -11,7 +11,17 @@
 
 .burger-img {
   position: absolute;
+
+  left: 50%;
+  transform: translate(-50%);
+
+  overflow-y: visible;
+}
+
+.burger-img__bg {
+  position: absolute;
   bottom: 0;
+
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -21,11 +31,12 @@
 }
 
 .burger-create__wrapper {
-  min-width: 500px;
   position: relative;
+  min-width: clamp(20rem, 17.125rem + 14.37vw, 34.375rem);
   display: flex;
   justify-content: start;
   align-items: flex-start;
 
   height: 100%;
+  width: 100%;
 }

@@ -54,7 +54,7 @@
             </div>
             <div class="price">$ <span data-sum-price>0.00</span></div>
             <img
-              class="burger-img"
+              class="burger-img__bg"
               src="./img/bg/bg_burger.svg"
               alt="bg-burger"
             />
@@ -271,9 +271,45 @@
         <img src="./img/icon/menu_close.svg" alt="close menu" />
       </button>
     </nav>
+    <!-- 
+    POP-UP -->
+    <div id="pop-up__mail" class="pop-up">
+      <div class="pup-up_body">
+        <div class="pop-up__content content-mail">
+          <button class="pop-up__close-btn close-btn">+</button>
+          <img class="pop-up__bg" src="./img/bg/bg_burger.svg" alt="" />
+          <div class="burger__wrapper--pop-up"></div>
+          <p class="pop-up__title">
+            Enter your email address and and wait for an SMS from us.
+          </p>
+          <div class="form">
+            <form id="emailForm">
+              <input class="form-input type="email" name="email"
+              placeholder="Enter email" required />
+            </form>
+            <button class="form-btn next-btn" type="submit">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script src="./js/main.js"></script>
+    <div id="pop-up__thenk" class="pop-up">
+      <div class="pup-up_body">
+        <div class="pop-up__content content-thenk">
+          <button class="pop-up__close-btn close-btn">+</button>
+          <img class="pop-up__bg" src="./img/bg/bg_burger.svg" alt="" />
+          <div class="burger__wrapper"></div>
+          <p class="pop-up__title">
+            The order has been accepted and is already being prepared. Thank
+            you.
+          </p>
+          <button class="form-btn end-btn" type="btn">Ok</button>
+        </div>
+      </div>
+    </div>
+
     <script src="./js/burger.js"></script>
     <script src="./js/nav-mobile.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

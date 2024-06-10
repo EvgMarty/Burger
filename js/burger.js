@@ -26,21 +26,28 @@ window.addEventListener('click', (event) => {
 
 // CREATE BURGER
 document.addEventListener('DOMContentLoaded', () => {
-  updateBurgerImages();
+  updateBurgerImages(document.querySelector('.burger-create__wrapper'));
+  updateBurgerImages(document.querySelector('.burger__wrapper--pop-up'));
 });
 
-const maxImages = 15;
+const maxImages = 20;
 
-function updateBurgerImages() {
-  const burgerCreate = document.querySelector('.burger-create__wrapper');
+function updateBurgerImages(container) {
   const warning = document.querySelector('.warning');
-  const burgerImages = burgerCreate.querySelectorAll('.burger-img');
-
-  const baseOffset = 5;
-  const offsetStep = 8;
-
+  const burgerImages = container.querySelectorAll('.burger-img');
+  if (!warning) return;
+  const baseOffset = 2;
+  const offsetStep = 5;
+  const cheeseOffsetAdjustment = -4; //CHEESe
   burgerImages.forEach((img, index) => {
-    img.style.bottom = `${baseOffset + index * offsetStep}%`;
+    let offset = baseOffset + index * offsetStep;
+
+    // CHEESE
+    if (img.src.includes('cheese.png')) {
+      offset += cheeseOffsetAdjustment;
+    }
+
+    img.style.bottom = `${offset}%`;
   });
 
   if (burgerImages.length > maxImages) {
@@ -78,8 +85,6 @@ window.addEventListener('click', (event) => {
     price: parseFloat(card.querySelector('.info').dataset.price),
   };
 
-  console.log(cart);
-
   if (event.target.dataset.action == 'plus') {
     cart.push(productInfo); // add
     displaUpdate();
@@ -94,15 +99,21 @@ window.addEventListener('click', (event) => {
 
 //DRAW BURGER
 const burgerCreate = document.querySelector('.burger-create__wrapper');
+const burgerCreatePopUp = document.querySelector('.burger__wrapper--pop-up');
 
 function drawBurger() {
   burgerCreate.innerHTML = '';
+  burgerCreatePopUp.innerHTML = '';
 
   cart.forEach((item) => {
     const imgProducts = `
-       <img class="burger-img" src="./img/burger/${item.imgSrc}.svg" alt="foot-bun" />`;
+       <img class="burger-img" src="./img/burger/${item.imgSrc}.png" alt="foot-bun" />`;
     burgerCreate.insertAdjacentHTML('beforeend', imgProducts);
+    burgerCreatePopUp.insertAdjacentHTML('beforeend', imgProducts);
   });
+
+  updateBurgerImages(burgerCreate);
+  updateBurgerImages(burgerCreatePopUp);
 }
 
 // TOTAL PRICE
@@ -150,19 +161,68 @@ function freeSouce() {
 
 // ACTIVE ORDER
 const btnOrder = document.querySelector('.btn-order');
+
 function activeOrder() {
   const { totalPrice } = calculateTotalValues();
   if (totalPrice > 0) {
     btnOrder.classList.add('btn-order--active');
+    btnOrder.removeAttribute('disabled');
   } else {
     btnOrder.classList.remove('btn-order--active');
+    btnOrder.setAttribute('disabled', 'disabled');
   }
+}
+
+// POP-UP
+const bodyTwoPage = document.querySelector('.body');
+const popUpMail = document.querySelector('#pop-up__mail');
+const contentMail = document.querySelector('.content-mail');
+const popUpThank = document.querySelector('#pop-up__thenk');
+const contentThenk = document.querySelector('.content-thenk');
+
+const closeBtn = document.querySelectorAll('.close-btn');
+const nextBtn = document.querySelector('.next-btn');
+const endBtn = document.querySelector('.end-btn');
+
+// OPEN FIRST POP-UP
+btnOrder.addEventListener('click', () => {
+  popUpMail.classList.add('pop-up--active');
+  contentMail.classList.add('pop-up__content--active');
+  bodyTwoPage.classList.add('no-scroll');
+});
+
+// OPEN THANK POP-UP
+nextBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  closePopUp();
+  popUpThank.classList.add('pop-up--active');
+  contentThenk.classList.add('pop-up__content--active');
+  bodyTwoPage.classList.add('no-scroll');
+});
+
+//FINISH POP-UP
+endBtn.addEventListener('click', () => {
+  closePopUp();
+});
+
+// CLOSE ALL POP-UP
+closeBtn.forEach((item) => {
+  item.addEventListener('click', closePopUp);
+});
+
+function closePopUp() {
+  popUpMail.classList.remove('pop-up--active');
+  contentMail.classList.remove('pop-up__content--active');
+  popUpThank.classList.remove('pop-up--active');
+  contentThenk.classList.remove('pop-up__content--active');
+  bodyTwoPage.classList.remove('no-scroll');
 }
 
 //UPDATE DISPLAY
 function displaUpdate() {
   drawBurger();
-  updateBurgerImages();
+  updateBurgerImages(document.querySelector('.burger-create__wrapper'));
+  updateBurgerImages(document.querySelector('.burger__wrapper--pop-up'));
   calculateTotalValues();
   activeOrder();
   freeSouce();

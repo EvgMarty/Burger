@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const burgerContainer = document.querySelector('.header');
   const burgerParts = document.querySelectorAll('.burger');
 
+
   // begining position
   const initialPositions = {
     'burger--footer-bun': { x: -50, y: 50, rotation: -15 },
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'burger--top-bun': { x: -120, y: -90, rotation: -10 },
   };
 
+  
   // mouse event
   burgerContainer.addEventListener('mousemove', (e) => {
     const containerWidth = burgerContainer.offsetWidth;
