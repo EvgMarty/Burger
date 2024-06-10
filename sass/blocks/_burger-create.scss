@@ -6,7 +6,7 @@
   justify-content: start;
   align-items: flex-start;
 
-  height: 100%;
+  height: clamp(75%, 4rem + 1.88vw, 100%);
 }
 
 .burger-img {

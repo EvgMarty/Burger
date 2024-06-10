@@ -7,6 +7,10 @@
   margin-top: 140px;
   height: 619px;
   padding: 0 50px;
+
+  @media (max-width: 500px) {
+    height: 500px;
+  }
 }
 
 .make-burger__sum {
@@ -19,7 +23,7 @@
   gap: 24px;
 
   @media (max-width: 970px) {
-  display: none;
+    display: none;
   }
 }
 
